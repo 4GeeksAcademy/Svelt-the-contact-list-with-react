@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
-
+import { AddContact } from "./views/addContact";
 import { Home } from "./views/home";
 
 import { EditContact } from "./views/editContact";
@@ -21,6 +21,7 @@ const Layout = () => {
         <ScrollToTop>
           <Navbar />
           <Routes>
+            <Route path="/addContact" element={<AddContact />} />
             <Route path="/" element={<Home />} />
 
             <Route path="/edit-contact/:theId" element={<EditContact />} />
